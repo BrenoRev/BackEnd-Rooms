@@ -13,7 +13,6 @@ import lombok.Data;
 
 @Entity
 @Table(name="meetingroom")
-@Data
 public class Room implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -45,5 +44,46 @@ public class Room implements Serializable{
 	
 	@Column(name="endHour", nullable = false)
 	private String endHour;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getStartHour() {
+		return startHour;
+	}
+
+	public void setStartHour(String startHour) {
+		this.startHour = startHour;
+	}
+
+	public String getEndHour() {
+		return endHour;
+	}
+
+	public void setEndHour(String endHour) {
+		this.endHour = endHour;
+	}
  	
+	
 }
